@@ -1,0 +1,20 @@
+# Dockerfile
+
+# Javascript function:
+# FROM amazon/aws-lambda-nodejs:12
+# ARG FUNCTION_DIR="/var/task"
+# RUN mkdir -p ${FUNCTION_DIR}
+# COPY handler.js ${FUNCTION_DIR}
+# CMD [ "handler.run" ]
+
+# Python function
+#FROM amazon/aws-lambda-python:3.8
+FROM public.ecr.aws/lambda/python:3.8
+COPY src/ .
+# add RIE for local testing
+# ADD https://github.com/aws/aws-lambda-runtime-interface-emulator/releases/latest/download/aws-lambda-rie /usr/bin/aws-lambda-rie
+# COPY entry.sh /
+# RUN chmod 755 /usr/bin/aws-lambda-rie /entry.sh
+# RUN pip install --target . awslambdaric
+# ENTRYPOINT [ "/entry.sh" ]
+CMD [ "lambda.handler" ]
