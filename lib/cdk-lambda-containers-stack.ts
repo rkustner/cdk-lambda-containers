@@ -21,14 +21,13 @@ export class CDKLambdaDocker extends cdk.Stack {
     // Create AWS Lambda function and push image to ECR
     const backend = new Lambda.DockerImageFunction(this, "function", {
       code: Lambda.DockerImageCode.fromImageAsset(dockerfile),
-
     });
     backend.addToRolePolicy(translateAccessPolicy)
 
     // create apigateway
-
     new apigateway.LambdaRestApi(this, 'myapi', {
       handler: backend,
     });
+
   }
 }
