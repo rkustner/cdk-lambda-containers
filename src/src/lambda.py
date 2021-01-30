@@ -4,7 +4,7 @@ import boto3
 translate = boto3.client(service_name='translate', region_name='eu-west-1', use_ssl=True)
 
 def handler(event, context):
-    input = "Our president is riding on a bicycle"
+    input = "The dutch president is riding to his work on a bicycle"
     if "queryStringParameters" in event:
         if event["queryStringParameters"]:
             if "input" in event["queryStringParameters"]:
