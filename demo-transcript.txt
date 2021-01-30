@@ -1,0 +1,28 @@
+
+# 1 Setup Environment
+
+cd /Users/rkustner/Development/Sandbox/cdk-lambda-containers
+export AWS_PROFILE='ricardo'
+
+# 2 Login to ECR
+aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 690167127138.dkr.ecr.eu-west-1.amazonaws.com/aws-cdk-assets
+
+# 3 Explain cdk init
+# https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html
+# npm install -g aws-cdk
+# cdk init app --language typescript
+# show bin/lib/test
+# cdk synth
+# cdk deploy
+
+# 4 Show AWS Console
+# Cloudformation template & resources
+# ECR
+# API Gateway
+# Lambda & Role
+
+# 5 Open API Gateway URL and test
+
+# 6 Local testing
+
+
