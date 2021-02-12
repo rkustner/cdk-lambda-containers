@@ -26,3 +26,5 @@ aws ecr get-login-password --region eu-west-1 | docker login --username AWS --pa
 # 6 Local testing
 
 
+
+

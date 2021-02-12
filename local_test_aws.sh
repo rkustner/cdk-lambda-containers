@@ -10,5 +10,5 @@ docker run -d -p 9000:8080 --env AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY_ID}" --env 
 
 echo "Test Lambda with:"
 echo "curl -XPOST "http://localhost:9000/2015-03-31/functions/function/invocations" \
--d '{\"queryStringParameters\": {\"input\": \"blah\"} }'"
+-d '{\"queryStringParameters\": {\"input\": \"local testing is great\"} }'"
 
